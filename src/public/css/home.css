@@ -589,4 +589,7 @@
                 flex-direction: column;
                 gap: 30px;
             }
+            .painel_home {
+               height: 30vh;
+            }
         }
