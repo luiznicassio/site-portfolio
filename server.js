@@ -28,7 +28,7 @@ const homeRoutes = require('./src/routes/HomeRoutes')
 app.use("/home", homeRoutes)
 
 app.get('/', (req, res) => {
-    res.send("ola mundo")
+    res.redirect('/home');
 })
 
 // AJUSTE PARA A VERCEL: Só liga o servidor localmente se não estiver na produção da Vercel
