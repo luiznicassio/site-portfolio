@@ -91,7 +91,7 @@
         /* --- Grid de Projetos --- */
         .projetos_galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 340px));
             gap: 30px;
         }
 
@@ -236,4 +236,8 @@
             .pagina_projetos { padding: 0 20px; }
             .projetos_toolbar { flex-direction: column; align-items: stretch; }
             .busca_container { width: 100%; }
+            .projetos_galeria {
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+            }
         }
