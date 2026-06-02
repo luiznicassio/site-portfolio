@@ -1,0 +1,592 @@
+    
+        /* --- Container Principal --- */
+        .painel_home {
+            display: flex;
+            justify-content: space-between;    
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            min-height: 60vh;
+            gap: 40px;
+        }
+
+        #home_info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #home_info .boas-vindas {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        #home_info .boas-vindas span {
+            color: var(--cor-accent);
+            text-shadow: 0 0 20px var(--cor-accent-glow);
+        }
+
+        #home_info .nome {
+            font-size: clamp(1.2rem, 3vw, 2.2rem);
+            font-weight: 300;
+            color: #9ca3af;
+            border-left: 4px solid var(--cor-accent);
+            padding-left: 15px;
+            margin: 10px 0;
+        }
+
+        #home_info .cargo {
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(to right, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .container-img{
+            width: 40%;
+        }
+        .container-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0px 10px 30px var(--cor-accent-glow)); 
+        }
+
+        /* --- Seção de Tecnologias (Grid) --- */
+        .lista_l {
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+        }
+
+        .lista_l ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista_l ul li {
+            background-color: var(--bg-card, #1e1e1e);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #d1d5db;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .lista_l ul li:hover {
+            background-color: var(--cor-accent-glow);
+            border-color: var(--cor-accent);
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px var(--cor-accent-glow);
+        }
+
+        /* --- Seção Especialidades --- */
+        .especialidades {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .titulo-secao {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        .titulo-secao span {
+            color: var(--cor-accent);
+        }
+
+        .grid-especialidades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-especialidade {
+            background-color: var(--bg-card, #1e1e1e);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 35px 25px;
+            border-radius: 16px;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .icone-card {
+            color: var(--cor-accent);
+            width: 45px;
+            height: 45px;
+            background-color: var(--cor-accent-glow);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icone-card svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-especialidade h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .card-especialidade p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #9ca3af;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .card-especialidade:hover {
+            transform: translateY(-6px);
+            border-color: var(--cor-accent);
+            box-shadow: 0 15px 30px -10px var(--cor-accent-glow);
+        }
+
+        /* --- Seção Projetos Modificados --- */
+        .projetos {
+            padding: 40px;
+            max-width: 1240px;
+            margin: 0 auto 80px auto;
+        }
+
+        .projetos_conteiner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .item_projeto {
+            background-color: var(--bg-card, #1e1e1e);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .item_projeto:hover {
+            transform: translateY(-6px);
+            border-color: var(--cor-accent);
+            box-shadow: 0 15px 30px -10px var(--cor-accent-glow);
+        }
+
+        .item_projeto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .projeto_conteudo {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .projeto_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .projeto_header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .link-deploy {
+            font-size: 0.85rem;
+            color: var(--cor-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .link-deploy:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .projeto_conteudo p {
+            margin: 0;
+            color: #9ca3af;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+        
+        /* Tags dos Projetos */
+        .tag_projeto {
+            width: fit-content;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 12px;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 14px;    
+            border-radius: 6px;
+        }
+
+        .tag_webSite {
+            border: solid 1px rgba(29, 1, 153, 0.4);
+            background-color: rgba(29, 1, 153, 0.08);
+            color: #818cf8;
+        }
+
+        .tag_api {
+            border: solid 1px rgba(6, 153, 1, 0.4);
+            background-color: rgba(6, 153, 1, 0.08);
+            color: #4ade80;
+        }
+
+        /* ==========================================================================
+           ESTILOS DA MODAL (JANELA DE DETALHES)
+           ========================================================================== */
+        
+        /* Fundo escurecido e borrado */
+        .modal_overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px); /* Efeito de desfoque profissional no fundo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+        }
+
+        /* Modal ativa */
+        .modal_overlay.ativa {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Caixa do conteúdo da modal */
+        .modal_container {
+            background-color:rgb(22, 22, 22);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(30px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal_overlay.ativa .modal_container {
+            transform: translateY(0);
+        }
+
+        /* Botão Fechar */
+        .btn_fechar_modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .btn_fechar_modal:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* Banner superior da modal */
+        .modal_banner {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Conteúdo interno da modal */
+        .modal_conteudo {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal_titulo_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .modal_titulo_wrapper h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Seções de texto detalhado */
+        .modal_secao {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .modal_secao h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--cor-accent, #818cf8);
+            font-weight: 600;
+        }
+
+        .modal_secao p {
+            margin: 0;
+            color: #d1d5db;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Lista de recursos/regras */
+        .modal_lista {
+            margin: 0;
+            padding-left: 20px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* Links de ação */
+        .modal_links_acoes {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn_modal_link {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.2s;
+        }
+
+        .btn_modal_link.primario {
+            background-color: var(--cor-accent, #4f46e5);
+            color: #fff;
+        }
+
+        .btn_modal_link.secundario {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #d1d5db;
+        }
+
+        .btn_modal_link:hover {
+            opacity: 0.9;
+        }
+
+        /* Foter*/
+        .footer{
+             border-top: 1px solid rgba(255, 255, 255, 0.05);
+             padding: 2em;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+        .footer_conteiner{
+             max-width: 1240px;
+             width: 100%;
+             padding: 0px 20px;
+             display: flex;
+             flex-direction: column;
+             gap: 20px;
+
+        }
+        .footer_conteudo{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer_conteudo h2{
+            font-weight: 600;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navegacao ul{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 20px 0px;
+        }
+        .navegacao ul a{
+            color: var(--cor-accent);
+            transition: 0.2s;
+           
+        }
+        .navegacao ul a:hover{
+            color: var(--cor-accent-glow); 
+            text-decoration:underline ;
+        }
+
+        .contato{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contato .email{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        .contato .email:hover{
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-2px);
+        }
+
+        .icone-email{
+            width: 42px;
+            height: 42px;
+            padding: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            color: var(--cor-accent);
+            flex-shrink: 0;
+        }
+
+        .contato .email p{
+            font-size: .95rem;
+            color: rgba(255,255,255,.8);
+        }
+
+        .footer_redes_sociais{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .redes_sociais{
+            display: flex;
+            gap: 15px;
+        }
+
+        .redes_sociais a{
+            width: 42px;
+            height: 42px;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            color: var(--cor-accent);
+            transition: all .3s ease;
+        }
+
+        .redes_sociais a:hover{
+            transform: translateY(-3px);
+            background: var(--cor-accent);
+            color: white;
+        }
+
+        .redes_sociais svg{
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* --- Media Queries (Responsividade) --- */
+        @media (max-width: 768px) {
+            .painel_home {
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            #home_info .nome {
+                border-left: none;
+                border-bottom: 2px solid var(--cor-accent);
+                padding-left: 0;
+                padding-bottom: 10px;
+                margin: 15px auto;
+                width: max-content;
+            }
+            
+            .especialidades, .projetos {
+                padding: 40px 20px;
+            }
+
+            .footer_conteudo{
+                flex-direction: column;
+                gap: 30px;
+            }
+        }

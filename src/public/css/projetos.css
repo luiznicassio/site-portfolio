@@ -1,0 +1,239 @@
+    /* --- Container Geral --- */
+        .pagina_projetos {
+            max-width: 1200px;
+            margin: 60px auto 100px auto;
+            padding: 0 40px;
+        }
+
+        /* --- Cabeçalho e Controles --- */
+        .projetos_header_pagina {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 30px;
+        }
+
+        .projetos_titulo {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        .projetos_titulo span {
+            color: var(--cor-accent);
+        }
+
+        /* Barra de Ferramentas (Filtros + Busca) */
+        .projetos_toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Botões de Filtro */
+        .filtros_container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn_filtro {
+            background-color: var(--bg-card, #1e1e1e);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #9ca3af;
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn_filtro:hover {
+            border-color: var(--cor-accent);
+            color: #fff;
+        }
+
+        .btn_filtro.ativo {
+            background-color: var(--cor-accent);
+            border-color: var(--cor-accent);
+            color: #fff;
+            box-shadow: 0 4px 15px var(--cor-accent-glow);
+        }
+
+        /* Campo de Busca */
+        .busca_container {
+            position: relative;
+            min-width: 260px;
+        }
+
+        .input_busca {
+            width: 100%;
+            background-color: var(--bg-card, #1e1e1e);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input_busca:focus {
+            border-color: var(--cor-accent);
+        }
+
+        /* --- Grid de Projetos --- */
+        .projetos_galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Individual */
+        .card_projeto_completo {
+            background-color: var(--bg-card, #1e1e1e);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card_projeto_completo:hover {
+            transform: translateY(-6px);
+            border-color: var(--cor-accent);
+            box-shadow: 0 15px 30px -10px var(--cor-accent-glow);
+        }
+
+        /* Quando o item é ocultado pelo filtro */
+        .card_projeto_completo.oculto {
+            display: none !important;
+        }
+
+        .card_projeto_completo img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .card_corpo {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .card_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card_header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .card_data {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .card_corpo p {
+            margin: 0;
+            color: #9ca3af;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card_links {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .link_proj {
+            font-size: 0.85rem;
+            color: var(--cor-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link_proj:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer do Card (Tags) */
+        .card_footer_tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag_base {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            font-weight: 600;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 6px;
+        }
+
+        /* Cores das Tags baseadas no tipo */
+        .tag_web {
+            border: solid 1px rgba(29, 1, 153, 0.4);
+            background-color: rgba(29, 1, 153, 0.08);
+            color: #818cf8;
+        }
+
+        .tag_api_express {
+            border: solid 1px rgba(6, 153, 1, 0.4);
+            background-color: rgba(6, 153, 1, 0.08);
+            color: #4ade80;
+        }
+
+        .tag_aca {
+            border: solid 1px rgba(243, 156, 18, 0.4);
+            background-color: rgba(243, 156, 18, 0.08);
+            color: #fbbf24;
+        }
+
+        .tag_desktop {
+            border: solid 1px rgba(153, 1, 102, 0.4);
+            background-color: rgba(153, 1, 102, 0.08);
+            color: #f472b6;
+        }
+
+        /* --- Mensagem de erro na busca --- */
+        #msg_vazio {
+            display: none;
+            color: #6b7280;
+            font-size: 1.1rem;
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .pagina_projetos { padding: 0 20px; }
+            .projetos_toolbar { flex-direction: column; align-items: stretch; }
+            .busca_container { width: 100%; }
+        }

@@ -1,0 +1,189 @@
+{{#section "head"}}
+    <title>Meu Portfólio | Todos os Projetos</title>
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/projetos.css">
+{{/section}}
+
+<main class="pagina_projetos">
+
+    <!-- Topo da Página com Controles -->
+    <header class="projetos_header_pagina">
+        <h1 class="projetos_titulo">Todos os <span>Projetos</span>.</h1>
+        
+        <div class="projetos_toolbar">
+            <!-- Filtros Dinâmicos -->
+            <div class="filtros_container">
+                <button class="btn_filtro ativo" data-filter="all">Todos</button>
+                <button class="btn_filtro" data-filter="web">Web Sites</button>
+                <button class="btn_filtro" data-filter="api">APIs</button>
+                <button class="btn_filtro" data-filter="desktop">Desktop / Java</button>
+                <button class="btn_filtro" data-filter="acad">Acadêmicos</button>
+            </div>
+
+            <!-- Campo de Busca por Texto -->
+            <div class="busca_container">
+                <input type="text" id="busca_projeto" class="input_busca" placeholder="Buscar por tecnologia ou nome...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Galeria de Cards -->
+    <section class="projetos_galeria" id="galeria">
+        
+        <!-- Mensagem caso nada seja encontrado -->
+        <p id="msg_vazio">Nenhum projeto corresponde à sua busca.</p>
+
+        <!-- Card 1: VALORANT-TEAMS -->
+        
+
+        <!-- Card 2: Sphere Edu -->
+        <div class="card_projeto_completo" data-tipo="web">
+            <img src="/img/projetoEdu.png" alt="Sphere Edu">
+            <div class="card_corpo">
+                <div class="card_header">
+                    <h3>Sphere Edu</h3>
+                    <span class="card_data">Mai 2026</span>
+                </div>
+                <p>O Sphere Edu é um website desenvolvido com Express que funciona como o embrião de uma rede social acadêmica, servindo de hub para compartilhamento de conhecimentos.</p>
+                <div class="card_links">
+                    <a href="#" class="link_proj">Repositório ↗</a>
+                </div>
+                <div class="card_footer_tags">
+                    <span class="tag_base tag_web">Web Site</span>
+                    <span class="tag_base tag_api_express">Node.js</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: valplayers-api -->
+        <div class="card_projeto_completo" data-tipo="api">
+            <img src="/img/projeto3.png" alt="valplayers-api">
+            <div class="card_corpo">
+                <div class="card_header">
+                    <h3>valplayers-api</h3>
+                    <span class="card_data">Jan 2026</span>
+                </div>
+                <p>Plataforma web em JavaScript puro integrada a uma API REST estruturada em Express. Focada no treino de modelagem de dados relacionais complexos.</p>
+                <div class="card_links">
+                    <a href="#" class="link_proj">Repositório ↗</a>
+                </div>
+                <div class="card_footer_tags">
+                    <span class="tag_base tag_api_express">API Express</span>
+                    <span class="tag_base tag_web">JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: Study-Sync -->
+        <div class="card_projeto_completo" data-tipo="acad">
+            <img src="/img/projeto2.png" alt="Study-Sync">
+            <div class="card_corpo">
+                <div class="card_header">
+                    <h3>Study-Sync</h3>
+                    <span class="card_data">Nov 2025</span>
+                </div>
+                <p>Gerenciador de tarefas web focado em Governança de TI. Utiliza LocalStorage para salvar dados localmente no navegador do usuário, dispensando servidores externos.</p>
+                <div class="card_links">
+                    <a href="https://study-sync-drab.vercel.app/" target="_blank" class="link_proj">Acessar Demo ↗</a>
+                </div>
+                <div class="card_footer_tags">
+                    <span class="tag_base tag_web">Web Site</span>
+                    <span class="tag_base tag_aca">Acadêmico</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Gerenciador Kanban (Java Desktop) -->
+        <div class="card_projeto_completo" data-tipo="desktop">
+            <img src="/img/projeto1.png" alt="Gerenciador Kanban">
+            <div class="card_corpo">
+                <div class="card_header">
+                    <h3>Gerenciador de Tarefas</h3>
+                    <span class="card_data">Abr 2026</span>
+                </div>
+                <p>Aplicação desktop robusta desenvolvida em Java Swing simulando um quadro Kanban completo com recursos visuais modernos e gerenciamento de estados.</p>
+                <div class="card_links">
+                    <a href="#" class="link_proj">Repositório ↗</a>
+                </div>
+                <div class="card_footer_tags">
+                    <span class="tag_base tag_desktop">Java Fx</span>
+                    <span class="tag_base tag_desktop">Desktop</span>
+                </div>
+            </div>
+        </div>
+
+
+
+          <!-- Card 5: Gerenciador Kanban (Java Desktop) -->
+        <div class="card_projeto_completo" data-tipo="desktop">
+            <img src="/img/projeto1.png" alt="Gerenciador Kanban">
+            <div class="card_corpo">
+                <div class="card_header">
+                    <h3>Gerenciador de Estoque</h3>
+                    <span class="card_data">Abr 2026</span>
+                </div>
+                <p>Aplicação desktop robusta desenvolvida em Java Swing simulando um quadro Kanban completo com recursos visuais modernos e gerenciamento de estados.</p>
+                <div class="card_links">
+                    <a href="#" class="link_proj">Repositório ↗</a>
+                </div>
+                <div class="card_footer_tags">
+                    <span class="tag_base tag_desktop">Java Swing</span>
+                    <span class="tag_base tag_desktop">Desktop</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<!-- Script de Filtragem e Busca Dinâmica -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const botoes = document.querySelectorAll(".btn_filtro");
+        const cards = document.querySelectorAll(".card_projeto_completo");
+        const inputBusca = document.getElementById("busca_projeto");
+        const msgVazio = document.getElementById("msg_vazio");
+
+        let filtroAtual = "all";
+        let textoBusca = "";
+
+        function aplicarFiltros() {
+            let visiveis = 0;
+
+            cards.forEach(card => {
+                const tipoCard = card.getAttribute("data-tipo");
+                const textoCard = card.innerText.toLowerCase();
+
+                const atendeFiltro = (filtroAtual === "all" || tipoCard === filtroAtual);
+                const atendeBusca = textoCard.includes(textoBusca);
+
+                if (atendeFiltro && atendeBusca) {
+                    card.classList.remove("oculto");
+                    visiveis++;
+                } else {
+                    card.classList.add("oculto");
+                }
+            });
+
+            // Exibe mensagem caso nenhum card passe nos filtros
+            msgVazio.style.display = (visiveis === 0) ? "block" : "none";
+        }
+
+        // Evento dos botões de filtro
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+                botoes.forEach(b => b.classList.remove("ativo"));
+                botao.classList.add("ativo");
+                
+                filtroAtual = botao.getAttribute("data-filter");
+                aplicarFiltros();
+            });
+        });
+
+        // Evento de digitação na busca
+        inputBusca.addEventListener("input", (e) => {
+            textoBusca = e.target.value.toLowerCase();
+            aplicarFiltros();
+        });
+    });
+</script>

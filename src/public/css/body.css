@@ -1,0 +1,22 @@
+ :root {
+            --font-primaria: "Rubik", "Roboto", sans-serif;
+            --bg-principal: #0f0e13; /* Um tom de grafite escuro mais moderno */
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --texto-principal: #f3f4f6;
+            --cor-accent: #8b5cf6; /* Roxo/Violeta mais vivo */
+            --cor-accent-glow: rgba(139, 92, 246, 0.2);
+            --transition-padrao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primaria);
+            background-color: var(--bg-principal);
+            color: var(--texto-principal);
+            overflow-x: hidden;
+        } 
