@@ -11,7 +11,7 @@
   ],
   "routes": [
     {
-      "src": "/home",
+      "src": "/(.*)",
       "dest": "server.js"
     }
   ]
